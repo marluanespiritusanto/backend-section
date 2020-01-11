@@ -11,7 +11,8 @@ class UserController {
   }
 
   async getAll(req, res) {
-    const users = await _userService.getAll();
+    const { pageSize, pageNum } = req.query;
+    const users = await _userService.getAll(pageSize, pageNum);
     return res.send(users);
   }
 
