@@ -59,7 +59,7 @@ class IdeaService extends BaseService {
 
     idea.downvotes.push(true);
 
-    return await _ideaRepository.update(ideaId, { upvotes: idea.downvotes });
+    return await _ideaRepository.update(ideaId, { downvotes: idea.downvotes });
   }
 }
 
